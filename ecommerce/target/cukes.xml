@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="35.923">
+<testcase classname="Registration | User could signup with  anew account" name="User could register with valid data" time="35.703">
+<failure message="invalid argument&#10;  (Session info: chrome=100.0.4896.75)&#10;Build info: version: '4.1.2', revision: '9a5a329c5a'&#10;System info: host: 'DESKTOP-LIKU9SB', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_151'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [2fcc893164e4f39dd825b32ba5eb55a9, get {url=/register?returnUrl=%2F}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\nadeen\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:55692}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55692/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 2fcc893164e4f39dd825b32ba5eb55a9" type="org.openqa.selenium.InvalidArgumentException"><![CDATA[Given user click on register link...........................................failed
+When user fills personal details with valid data............................skipped
+And user fills pass with valid data.........................................skipped
+And user click on register button...........................................skipped
+Then success message displayed..............................................skipped
+
+StackTrace:
+org.openqa.selenium.InvalidArgumentException: invalid argument
+  (Session info: chrome=100.0.4896.75)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'DESKTOP-LIKU9SB', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2fcc893164e4f39dd825b32ba5eb55a9, get {url=/register?returnUrl=%2F}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\nadeen\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:55692}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55692/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2fcc893164e4f39dd825b32ba5eb55a9
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:1013)
+	at stepDefinition.register.regLink(register.java:14)
+	at ✽.user click on register link(file:///C:/Users/nadeen/Desktop/fwd/ecommerce/src/main/resources/features/F01_register.feature:4)
+]]></failure>
+</testcase>
+<testcase classname="Login | users could login to open their accounts" name="user could login with valid email and password" time="0">
+<failure message="The scenario has no steps" type="java.lang.Exception"/>
+</testcase>
+</testsuite>
