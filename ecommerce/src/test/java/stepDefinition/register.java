@@ -2,19 +2,19 @@ package stepDefinition;
 
 import io.cucumber.java.en.*;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+import org.testng.Assert;
 
-public class register {
+public class Register {
     String fname="aaa";
     String lname="bbb";
-    String email="aaa@gmail.com";
-    String pass="aaa@1111";
-@Given("user click on register link")
+    String email="email@gmail.com";
+    String pass="asdf@1234";
+
+    @Given("user click on register link")
     public void regLink() throws InterruptedException {
 
     Hooks.driver.findElement(By.cssSelector("a[class=\"ico-register\"]")).click();
     Thread.sleep(1000);
-    Hooks.driver.navigate().to("/register?returnUrl=%2F");
     }
 @When ("user fills personal details with valid data")
     public void fillDetails()  {
@@ -27,15 +27,23 @@ public class register {
 @And ("user fills pass with valid data")
     public void fillPass()  {
     Hooks.driver.findElement(By.cssSelector("input[id^=Password]")).sendKeys(pass);
+    Hooks.driver.findElement(By.cssSelector("input[id^=ConfirmPassword]")).sendKeys(pass);
+
 
 }
 @And ("user click on register button")
     public void regBtn()  {
-    Hooks.driver.findElement(By.cssSelector("input[id^=register-button]")).click();
+    Hooks.driver.findElement(By.cssSelector("button[id^=\"register-button\"]")).click();
 
     }
 @Then ("success message displayed")
-    public void regSuccessMsg()  {
+    public void regSuccessMsg()  throws InterruptedException{
+//    isDisplayed());//visible in ui page not dom page
+//     Assert.assertTrue(Hooks.driver.findElement(By.partialLinkText("Your registration completed")).isDisplayed());
+    Thread.sleep(2000);
+
+//    Assert.assertEquals(Hooks.driver.findElement(By.partialLinkText("Your registration completed")).isDisplayed(),true);
+    Assert.assertEquals(Hooks.driver.findElement(By.cssSelector("div[class=\"result\"]")).isDisplayed(),true);
 
     }
 }

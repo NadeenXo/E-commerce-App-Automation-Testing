@@ -16,8 +16,8 @@ public class Hooks {
         WebDriverManager.chromedriver().setup(); //System.getProperty()
         //new obj
         driver = new ChromeDriver();
-
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        //wait 10 until item exist in dom
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();//max screen
         //nav to website
         driver.navigate().to("https://demo.nopcommerce.com/");

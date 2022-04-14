@@ -1,5 +1,5 @@
 @regression
-  Feature: Registration | User could signup with  anew account
+  Feature: Registration | User could signup with a new account
     Scenario: User could register with valid data
       Given user click on register link
       When user fills personal details with valid data
