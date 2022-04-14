@@ -3,7 +3,7 @@ Feature: Search | users will be able to search for products
 
   Scenario: sc04 | user could search for product using fullname
 # changed pass:   111111
-    Given user is logged in with "email@gmail.com" and "asdf@1234"
+    Given user is logged in with "email@gmail.com" and "111111"
     When user search using the name of the product
     Then user could find camera
 
@@ -17,21 +17,24 @@ Feature: Search | users will be able to search for products
     And user can select sub category if found
     Then user could see results
 
-  Scenario: user could filter with color
+  Scenario: sc07| user could filter with color
     When user could select Apparel
     And user could select color gray
 
-#  Scenario:user could select different tags
-#    When user could select apparel tag
-#    And user could select book tag
-#
-#  Scenario: user could add different products to Shopping cart
-#    Given user could select Books category
-#    When user click add item to cart
-#    And user click add item to cart
-#    And user go to shopping cart
-#    Then added successfully to shopping cart
-#
+  Scenario: sc08 | user could select different tags
+    When user search using the name of the product
+    And user could select "awesome" tag
+    And user could select "book" tag
+
+  Scenario: sc09 | user could add different products to Shopping cart
+#   Given user is logged in with "email@gmail.com" and "asdf@1234"
+    When user could select a category
+    And user can select sub category if found
+    And user click add item to cart
+    Then added successfully to shopping cart mssg
+    And user click add item to cart
+    Then added successfully to shopping cart mssg
+
 #  Scenario: user could add different products to Wishlist
 #    Given user could select Books category
 #    When user click add to Wishlist

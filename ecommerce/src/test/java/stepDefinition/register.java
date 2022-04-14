@@ -7,7 +7,7 @@ import org.testng.Assert;
 public class Register {
     String fname="aaa";
     String lname="bbb";
-    String email="email@gmail.com";
+    String email="emaill@gmail.com";
     String pass="asdf@1234";
 
     @Given("user click on register link")

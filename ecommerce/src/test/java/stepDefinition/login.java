@@ -62,9 +62,10 @@ public class Login {
     @Then ("user has changed his-her password successfully")
     public void PassChangedSuccessfully(){
         SoftAssert softAssert = new SoftAssert();
-        String actRes = Hooks.driver.findElement(By.xpath("//p[@class=\"content\"]")).getText();
+        String actRes = Hooks.driver.findElement(By.className("content")).getText();
         softAssert.assertEquals(actRes.contains("Password was changed"),true, "1st assertion");//relative
-        softAssert.assertTrue(Hooks.driver.findElement(By.partialLinkText("Password was changed")).isDisplayed(),"2nd assertion");
+        softAssert.assertEquals(Hooks.driver.findElement(By.className("content")).getText().contains("Password was changed"),true,"2nd assertion");
+
         softAssert.assertAll();
 
     }

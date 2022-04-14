@@ -11,8 +11,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
-import java.security.Key;
-
 public class Search {
 
     @When("user search using the name of the product")
@@ -22,7 +20,7 @@ public class Search {
 
     }
     @Then("user could find camera")
-    public void serchResults(){
+    public void searchResults(){
         int count = Hooks.driver.findElements(By.cssSelector("h2[class=\"product-title\"] a")).size();  // 0
         SoftAssert softAssert =new SoftAssert();
         softAssert.assertTrue(count > 0);
@@ -46,17 +44,17 @@ public class Search {
     //
     @When ("user could select a category")
     public void selectCategory(){
-       Hooks.driver.findElement(By.cssSelector("a[href=\"/computers\"]")).click();
+       Hooks.driver.findElement(By.cssSelector("a[href=\"/electronics\"]")).click();
 
     }
     @And ("user can select sub category if found")
     public void selectSubCategory(){
-        Hooks.driver.findElement(By.cssSelector("li[class=\"active last\"] a[href=\"/desktops\"]")).click();
+        Hooks.driver.findElement(By.cssSelector("li[class=\"active last\"] a[href=\"/cell-phones\"]")).click();
 
     }
     @Then("user could see results")
     public void categoryResults(){
-        int count = Hooks.driver.findElements(By.cssSelector("h2[class=\"product-title\"] a")).size();  // 0
+        int count = Hooks.driver.findElements(By.cssSelector("h2[class=\"product-title\"] a")).size();
         SoftAssert softAssert =new SoftAssert();
         softAssert.assertTrue(count > 0);
     }
@@ -74,4 +72,24 @@ public class Search {
         Hooks.driver.findElement(By.id("attribute-option-14")).click();
 
     }
+    @And ("^user could select \"(.*)\" tag$")
+    public void selectTag(String tagName){
+//        WebElement tag = Hooks.driver.findElement(By.cssSelector("[class=\"tags\"] ul"));
+        Hooks.driver.findElement(By.cssSelector("[class=\"tags\"] ul li a[href=\"/"+ tagName +"\"]")).click();
+        Assert.assertEquals(Hooks.driver.findElement(By.cssSelector("[class=\"page-title\"] h1")).getText().toLowerCase().contains(tagName),true);
+    }
+    //09
+
+    @And ("user click add item to cart")
+    public void addToCart() {
+        Hooks.driver.findElement(By.cssSelector("[class=\"button-2 product-box-add-to-cart-button\"]")).click();
+    }
+    @Then ("added successfully to shopping cart mssg")
+    public void addToCartSuccessfully(){
+        Assert.assertEquals(Hooks.driver.findElement(By.className("content")).getText().contains("The product has been added to your"),true);
+
+    }
+    //10
+
+
 }
