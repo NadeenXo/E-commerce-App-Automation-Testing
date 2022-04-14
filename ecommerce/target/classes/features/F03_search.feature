@@ -1,24 +1,26 @@
 @regression
 Feature: Search | users will be able to search for products
 
-#  Scenario: user could search for product using fullname
-#    When user clicks on search input
-#    And user search using the name of the product
-#    Then user could find expected results
+  Scenario: sc04 | user could search for product using fullname
+# changed pass:   111111
+    Given user is logged in with "email@gmail.com" and "asdf@1234"
+    When user search using the name of the product
+    Then user could find camera
 
-#    Scenario: user could switch between currencies US-Euro
-#    Given user search for product   //search input is desplayed
-#    When user can select currency selector
-#    And user could select currency
-#
-#  Scenario: user could select from different Categories
-#    When user could select a category
-#    And user can select sub category if found
-#
-#  Scenario: user could filter with color
-#    When user could select Apparel
-#    And user could select color gray
-#
+
+    Scenario: sc05 | user could switch between currencies US-Euro
+    When user select Euro currency
+    Then user could see product with Euro currency
+
+  Scenario: sc06 | user could select from different Categories
+    When user could select a category
+    And user can select sub category if found
+    Then user could see results
+
+  Scenario: user could filter with color
+    When user could select Apparel
+    And user could select color gray
+
 #  Scenario:user could select different tags
 #    When user could select apparel tag
 #    And user could select book tag

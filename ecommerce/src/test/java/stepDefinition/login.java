@@ -40,8 +40,8 @@ public class Login {
     }
 
     @When ("user should click on my account link then click on change password")
-    public void changePasswordLink(){
-
+    public void changePasswordLink() throws InterruptedException {
+        Thread.sleep(1000);
         Hooks.driver.findElement(By.cssSelector("a[class=\"ico-account\"]")).click();
         Hooks.driver.findElement(By.cssSelector("li[class=\"change-password inactive\"]>a")).click();//change password
     }
@@ -62,7 +62,7 @@ public class Login {
     @Then ("user has changed his-her password successfully")
     public void PassChangedSuccessfully(){
         SoftAssert softAssert = new SoftAssert();
-        String actRes = Hooks.driver.findElement(By.xpath("/p[@class=\"content\"]")).getText();
+        String actRes = Hooks.driver.findElement(By.xpath("//p[@class=\"content\"]")).getText();
         softAssert.assertEquals(actRes.contains("Password was changed"),true, "1st assertion");//relative
         softAssert.assertTrue(Hooks.driver.findElement(By.partialLinkText("Password was changed")).isDisplayed(),"2nd assertion");
         softAssert.assertAll();
