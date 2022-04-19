@@ -90,6 +90,127 @@ public class Search {
 
     }
     //10
+    @And ("user click add to Wishlist")
+    public void addToWishlist() {
+        Hooks.driver.findElement(By.cssSelector("button[class=\"button-2 add-to-wishlist-button\"]")).click();
+    }
+    @Then ("added successfully to Wishlist")
+    public void addToWishlistSuccessfully(){
+        Assert.assertEquals(Hooks.driver.findElement(By.className("content")).getText().contains("The product has been added to your"),true);
 
+    }
+    //11
+    @And ("user click add to compare list")
+    public void addToComparelist() {
+        Hooks.driver.findElement(By.cssSelector("button[class=\"button-2 add-to-wishlist-button\"]")).click();
+    }
+
+    @Then ("added successfully to compare list")
+    public void addToComparelistSuccessfully(){
+        Assert.assertEquals(Hooks.driver.findElement(By.className("content")).getText().contains("The product has been added to your"),true);
+
+    }
+    //12
+    @When ("user click on shopping cart")
+    public void clickShoppingCart() {
+        Hooks.driver.findElement(By.cssSelector("a[href=\"/cart\"]")).click();
+
+//a[href="/cart"]
+    }
+
+    @And ("user accept terms of service")
+    public void accepttermsofservice() {
+        Hooks.driver.findElement(By.id("termsofservice")).click();
+//id termsofservice
+    }
+    @And ("user choose checkout")
+    public void checkout() {
+        Hooks.driver.findElement(By.id("checkout")).click();
+
+//id="checkout"
+    }
+    @And ("user fills all checkout data")
+    public void fillcheckoutdata() {
+        //select new address
+        if(Hooks.driver.findElement(By.id("billing-address-select")).isDisplayed()) {
+            WebElement new_webElement = Hooks.driver.findElement(By.id("billing-address-select"));
+            Select new_select = new Select(new_webElement);
+            new_select.selectByVisibleText("New Address");
+        }
+        //fill all required data
+        Hooks.driver.findElement(By.id("BillingNewAddress_FirstName")).clear();
+
+        Hooks.driver.findElement(By.id("BillingNewAddress_FirstName")).sendKeys("nadeen");
+        Hooks.driver.findElement(By.id("BillingNewAddress_LastName")).clear();
+
+        Hooks.driver.findElement(By.id("BillingNewAddress_LastName")).sendKeys("serag");
+        Hooks.driver.findElement(By.id("BillingNewAddress_Email")).clear();
+        Hooks.driver.findElement(By.id("BillingNewAddress_Email")).sendKeys("email@gmail.com");
+
+        //country
+        WebElement Country_webElement = Hooks.driver.findElement(By.id("BillingNewAddress_CountryId"));
+        Select Country_select = new Select(Country_webElement);
+        Country_select.selectByValue("1");
+        //state
+        WebElement StateProvince_webElement = Hooks.driver.findElement(By.id("BillingNewAddress_StateProvinceId"));
+        Select StateProvince_select = new Select(StateProvince_webElement);
+        StateProvince_select.selectByValue("1");
+
+        Hooks.driver.findElement(By.id("BillingNewAddress_City")).sendKeys("newyork");
+        Hooks.driver.findElement(By.id("BillingNewAddress_Address1")).sendKeys("street 5,building 4");
+        Hooks.driver.findElement(By.id("BillingNewAddress_ZipPostalCode")).sendKeys("null");
+        Hooks.driver.findElement(By.id("BillingNewAddress_PhoneNumber")).sendKeys("01001100111");
+
+//        BillingNewAddress_FirstName 00
+//                BillingNewAddress_LastName 00
+//        BillingNewAddress_Email 00
+//                BillingNewAddress_CountryId -> option value1   00
+//                BillingNewAddress_StateProvinceId -> option value1   00
+//                BillingNewAddress_City -> newyork   00
+//        BillingNewAddress_Address1->street5 00
+//        BillingNewAddress_ZipPostalCode->null
+//        BillingNewAddress_PhoneNumber->01001100111
+
+    }
+//      country state city add1 zip phn
+    @And ("user click on continue")
+    public void continueCheckout() {
+//        button[name="save"]
+        Hooks.driver.findElement(By.cssSelector("button[name=\"save\"]")).click();
+
+    }
+        @And ("user click on continue-shipping")
+        public void continueShipping() {
+            Hooks.driver.findElement(By.cssSelector("button[class=\"button-1 shipping-method-next-step-button\"]")).click();
+
+        }
+
+//    #button[class="button-1 shipping-method-next-step-button"]
+        @And ("user click on continue-payment-method")
+    public void continuePaymentMethod() {
+        Hooks.driver.findElement(By.cssSelector("button[class=\"button-1 payment-method-next-step-button\"]")).click();
+
+    }
+//    #button[class="button-1 payment-method-next-step-button"]
+        @And ("user click on continue-payment-info")
+        public void continuePaymentInfo() {
+            Hooks.driver.findElement(By.cssSelector("button[class=\"button-1 payment-info-next-step-button\"]")).click();
+
+        }
+//    #button[class="button-1 payment-info-next-step-button"]
+        @And ("user click on confirm-order")
+//    #button[class="button-1 confirm-order-next-step-button"]
+        public void confirmOrderNext() {
+            Hooks.driver.findElement(By.cssSelector("button[class=\"button-1 confirm-order-next-step-button\"]\n")).click();
+
+        }
+
+    @Then ("user order products successfully")
+    public void checkoutSuccessfully() {
+//        div[class="details-link"]
+        Hooks.driver.findElement(By.cssSelector("div[class=\"details-link\"]")).click();
+
+
+    }
 
 }

@@ -5,9 +5,9 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 
 public class Register {
-    String fname="aaa";
-    String lname="bbb";
-    String email="emaill@gmail.com";
+    String fname="nadeen";
+    String lname="serag";
+    String email="email@gmail.com";
     String pass="asdf@1234";
 
     @Given("user click on register link")

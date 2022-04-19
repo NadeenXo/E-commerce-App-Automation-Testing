@@ -1,1 +1,2 @@
 file:src/main/resources/features/F02_login.feature:10
+file:src/main/resources/features/F03_search.feature:52

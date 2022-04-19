@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="9" time="133.632">
-<testcase classname="Registration | User could signup with a new account" name="User could register with valid data" time="15.013">
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="12" time="175.579">
+<testcase classname="Registration | User could signup with a new account" name="User could register with valid data" time="28.81">
 <system-out><![CDATA[Given user click on register link...........................................passed
 When user fills personal details with valid data............................passed
 And user fills pass with valid data.........................................passed
@@ -8,30 +8,30 @@ And user click on register button...........................................pass
 Then success message displayed..............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login | users could login to open their accounts" name="sc02 | user could login with valid email and password" time="9.554">
+<testcase classname="Login | users could login to open their accounts" name="sc02 | user could login with valid email and password" time="11.548">
 <system-out><![CDATA[Given user should go to login page..........................................passed
 When user login with valid "email@gmail.com" and "asdf@1234"................passed
 And user press on login button..............................................passed
 Then user login to the system successfully..................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login | users could login to open their accounts" name="sc03 | User could reset his/her password successfully" time="27.072">
-<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;partial link text&quot;,&quot;selector&quot;:&quot;Password was changed&quot;}&#10;  (Session info: chrome=100.0.4896.88)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.2', revision: '9a5a329c5a'&#10;System info: host: 'DESKTOP-LIKU9SB', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_151'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [0f3326bfe17839b543b1bd936e5ded5b, findElement {using=partial link text, value=Password was changed}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.88, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\nadeen\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:61937}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61937/devtoo..., se:cdpVersion: 100.0.4896.88, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 0f3326bfe17839b543b1bd936e5ded5b" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user is logged in with "email@gmail.com" and "asdf@1234"..............passed
-When user should click on my account link then click on change password.....passed
-And user fills old pass "asdf@1234" and new pass............................passed
-And user click on Change password button....................................passed
-Then user has changed his-her password successfully.........................failed
+<testcase classname="Login | users could login to open their accounts" name="sc03 | User could reset his/her password successfully" time="22.511">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;a[class=&quot;ico-account&quot;]&quot;}&#10;  (Session info: chrome=100.0.4896.127)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.2', revision: '9a5a329c5a'&#10;System info: host: 'DESKTOP-LIKU9SB', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_151'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [d97e33384f465ecb081394be8787ad88, findElement {using=css selector, value=a[class=&quot;ico-account&quot;]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\nadeen\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54894}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54894/devtoo..., se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: d97e33384f465ecb081394be8787ad88" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user is logged in with "emaill@gmail.com" and "asdf@1234".............passed
+When user should click on my account link then click on change password.....failed
+And user fills old pass "asdf@1234" and new pass............................skipped
+And user click on Change password button....................................skipped
+Then user has changed his-her password successfully.........................skipped
 
 StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"partial link text","selector":"Password was changed"}
-  (Session info: chrome=100.0.4896.88)
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"a[class="ico-account"]"}
+  (Session info: chrome=100.0.4896.127)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.1.2', revision: '9a5a329c5a'
 System info: host: 'DESKTOP-LIKU9SB', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_151'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0f3326bfe17839b543b1bd936e5ded5b, findElement {using=partial link text, value=Password was changed}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.88, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\nadeen\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:61937}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61937/devtoo..., se:cdpVersion: 100.0.4896.88, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 0f3326bfe17839b543b1bd936e5ded5b
+Command: [d97e33384f465ecb081394be8787ad88, findElement {using=css selector, value=a[class="ico-account"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\nadeen\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54894}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54894/devtoo..., se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d97e33384f465ecb081394be8787ad88
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -47,45 +47,107 @@ Session ID: 0f3326bfe17839b543b1bd936e5ded5b
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-	at stepDefinition.Login.PassChangedSuccessfully(Login.java:67)
-	at ✽.user has changed his-her password successfully(file:///C:/Users/nadeen/Desktop/fwd/ecommerce%20app/ecommerce/src/main/resources/features/F02_login.feature:15)
+	at stepDefinition.Login.changePasswordLink(Login.java:45)
+	at ✽.user should click on my account link then click on change password(file:///C:/Users/nadeen/Desktop/fwd/ecommerce%20app/ecommerce/src/main/resources/features/F02_login.feature:12)
 ]]></failure>
 </testcase>
-<testcase classname="Search | users will be able to search for products" name="sc04 | user could search for product using fullname" time="21.794">
+<testcase classname="Search | users will be able to search for products" name="sc04 | user could search for product using fullname" time="11.557">
 <system-out><![CDATA[Given user is logged in with "email@gmail.com" and "111111".................passed
 When user search using the name of the product..............................passed
 Then user could find camera.................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Search | users will be able to search for products" name="sc05 | user could switch between currencies US-Euro" time="10.345">
+<testcase classname="Search | users will be able to search for products" name="sc05 | user could switch between currencies US-Euro" time="8.676">
 <system-out><![CDATA[When user select Euro currency..............................................passed
 Then user could see product with Euro currency..............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Search | users will be able to search for products" name="sc06 | user could select from different Categories" time="12.055">
+<testcase classname="Search | users will be able to search for products" name="sc06 | user could select from different Categories" time="11.358">
 <system-out><![CDATA[When user could select a category...........................................passed
 And user can select sub category if found...................................passed
 Then user could see results.................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Search | users will be able to search for products" name="sc07| user could filter with color" time="10.444">
+<testcase classname="Search | users will be able to search for products" name="sc07| user could filter with color" time="10.39">
 <system-out><![CDATA[When user could select Apparel..............................................passed
 And user could select color gray............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Search | users will be able to search for products" name="sc08 | user could select different tags" time="13.753">
+<testcase classname="Search | users will be able to search for products" name="sc08 | user could select different tags" time="11.258">
 <system-out><![CDATA[When user search using the name of the product..............................passed
 And user could select "awesome" tag.........................................passed
 And user could select "book" tag............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Search | users will be able to search for products" name="sc09 | user could add different products to Shopping cart" time="13.364">
-<system-out><![CDATA[When user could select a category...........................................passed
+<testcase classname="Search | users will be able to search for products" name="sc09 | user could add different products to Shopping cart" time="12.157">
+<system-out><![CDATA[Given user is logged in with "email@gmail.com" and "11111111"...............passed
+When user could select a category...........................................passed
 And user can select sub category if found...................................passed
 And user click add item to cart.............................................passed
 Then added successfully to shopping cart mssg...............................passed
 And user click add item to cart.............................................passed
 Then added successfully to shopping cart mssg...............................passed
 ]]></system-out>
+</testcase>
+<testcase classname="Search | users will be able to search for products" name="sc10 | user could add different products to Wishlist" time="9.759">
+<system-out><![CDATA[Given user could select a category..........................................passed
+And user can select sub category if found...................................passed
+And user click add to Wishlist..............................................passed
+And user click add to Wishlist..............................................passed
+Then added successfully to Wishlist.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search | users will be able to search for products" name="sc11 | user could add different products to compare list" time="10.753">
+<system-out><![CDATA[Given user could select a category..........................................passed
+And user can select sub category if found...................................passed
+And user click add to compare list..........................................passed
+And user click add to compare list..........................................passed
+Then added successfully to compare list.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search | users will be able to search for products" name="sc12 | user could create a successful Order" time="26.304">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#billing\-address\-select&quot;}&#10;  (Session info: chrome=100.0.4896.127)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.2', revision: '9a5a329c5a'&#10;System info: host: 'DESKTOP-LIKU9SB', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_151'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [1c0567f48345df1fd284b7c46445cb4e, findElement {using=id, value=billing-address-select}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\nadeen\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:55079}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55079/devtoo..., se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 1c0567f48345df1fd284b7c46445cb4e" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user is logged in with "email@gmail.com" and "111111".................passed
+When user could select a category...........................................passed
+And user can select sub category if found...................................passed
+And user click add item to cart.............................................passed
+When user click on shopping cart............................................passed
+And user accept terms of service............................................passed
+And user choose checkout....................................................passed
+And user fills all checkout data............................................failed
+And user click on continue..................................................skipped
+And user click on continue-shipping.........................................skipped
+And user click on continue-payment-method...................................skipped
+And user click on continue-payment-info.....................................skipped
+And user click on confirm-order.............................................skipped
+Then user order products successfully.......................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#billing\-address\-select"}
+  (Session info: chrome=100.0.4896.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'DESKTOP-LIKU9SB', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1c0567f48345df1fd284b7c46445cb4e, findElement {using=id, value=billing-address-select}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\nadeen\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:55079}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55079/devtoo..., se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1c0567f48345df1fd284b7c46445cb4e
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at stepDefinition.Search.fillcheckoutdata(Search.java:135)
+	at ✽.user fills all checkout data(file:///C:/Users/nadeen/Desktop/fwd/ecommerce%20app/ecommerce/src/main/resources/features/F03_search.feature:62)
+]]></failure>
 </testcase>
 </testsuite>

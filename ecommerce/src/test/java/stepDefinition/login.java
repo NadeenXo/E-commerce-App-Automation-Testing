@@ -28,7 +28,7 @@ public class Login {
     @Then("user login to the system successfully")
     public void loginSuccessMsg()
     {
-        Assert.assertTrue(Hooks.driver.findElement(By.cssSelector("p")).isDisplayed());
+        Assert.assertTrue(Hooks.driver.findElement(By.cssSelector("a[href=\"/logout\"]")).isDisplayed());
 
     }
 
@@ -41,9 +41,9 @@ public class Login {
 
     @When ("user should click on my account link then click on change password")
     public void changePasswordLink() throws InterruptedException {
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         Hooks.driver.findElement(By.cssSelector("a[class=\"ico-account\"]")).click();
-        Hooks.driver.findElement(By.cssSelector("li[class=\"change-password inactive\"]>a")).click();//change password
+        Hooks.driver.findElement(By.cssSelector("a[href=\"/customer/changepassword\"]")).click();//change password
     }
     @And ("^user fills old pass \"(.*)\" and new pass$")
     public void changeToNewPassword(String password){

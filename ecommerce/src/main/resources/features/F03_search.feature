@@ -26,7 +26,7 @@ Feature: Search | users will be able to search for products
     And user could select "book" tag
 
   Scenario: sc09 | user could add different products to Shopping cart
-#   Given user is logged in with "email@gmail.com" and "asdf@1234"
+  Given user is logged in with "email@gmail.com" and "11111111"
     When user could select a category
     And user can select sub category if found
     And user click add item to cart
@@ -34,29 +34,38 @@ Feature: Search | users will be able to search for products
     And user click add item to cart
     Then added successfully to shopping cart mssg
 
-#  Scenario: user could add different products to Wishlist
-#    Given user could select Books category
-#    When user click add to Wishlist
-#    And user click add to Wishlist
-#    Then added successfully to Wishlist
-#
-#  Scenario: user could add different products to compare list
-#    Given user could select Books category
-#    When user click add to compare list
-#    And user click add to compare list
-#    Then added successfully to compare list
-#
-#  Scenario: user could create a successful Order
-#    When user click on shopping cart
-#    And user accept terms of service
-#    And user choose checkout
-#    And user fills all checkout data
-#    And user click on continue
-#    And user click on continue
-#    And user click on continue
-#    And user click on continue
-#    And user click on continue
-#    Then user order products successfully
+  Scenario:sc10 | user could add different products to Wishlist
+    Given user could select a category
+    And user can select sub category if found
+    And user click add to Wishlist
+    And user click add to Wishlist
+    Then added successfully to Wishlist
+
+  Scenario:sc11 | user could add different products to compare list
+
+    Given user could select a category
+    And user can select sub category if found
+    And user click add to compare list
+    And user click add to compare list
+    Then added successfully to compare list
+
+  Scenario: sc12 | user could create a successful Order
+    Given user is logged in with "email@gmail.com" and "111111"
+#    if not changed pass then pass= asdf@1234
+    When user could select a category
+    And user can select sub category if found
+    And user click add item to cart
+
+    When user click on shopping cart
+    And user accept terms of service
+    And user choose checkout
+    And user fills all checkout data
+    And user click on continue
+    And user click on continue-shipping
+    And user click on continue-payment-method
+    And user click on continue-payment-info
+    And user click on confirm-order
+    Then user order products successfully
 
 
 
