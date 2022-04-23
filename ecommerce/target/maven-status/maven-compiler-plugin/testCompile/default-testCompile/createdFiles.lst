@@ -1,5 +1,6 @@
 stepDefinition\Hooks.class
 stepDefinition\Register.class
+pages\LoginPage.class
 stepDefinition\Login.class
 stepDefinition\Search.class
 runner\TestRunner.class

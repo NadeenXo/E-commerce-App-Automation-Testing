@@ -15,8 +15,8 @@ public class Login {
     @When("^user login with valid \"(.*)\" and \"(.*)\"$")
     public void validData(String username, String password)
     {
-        Hooks.driver.findElement(By.id("Email")).sendKeys(username);
-        Hooks.driver.findElement(By.id("Password")).sendKeys(password);
+        Hooks.loginPage.getEMailElement().sendKeys(username);
+        Hooks.loginPage.getPasswordElement().sendKeys(password);
     }
 
     @And("user press on login button")
