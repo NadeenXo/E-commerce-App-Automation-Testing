@@ -12,6 +12,7 @@ public class LoginPage {
           PageFactory.initElements(driver,this);
      }
      public WebElement getEMailElement() {
+
           return driver.findElement(By.id("Email"));
      }
      public WebElement getPasswordElement() {

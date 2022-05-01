@@ -15,8 +15,8 @@ public class Search {
 
     @When("user search using the name of the product")
     public void searchProduct(){
-        Hooks.driver.findElement(By.id("small-searchterms")).sendKeys("camera");
-        Hooks.driver.findElement(By.id("small-searchterms")).sendKeys(Keys.ENTER);
+        Hooks.searchPage.getSearchTerms().sendKeys("camera");
+        Hooks.searchPage.getSearchTerms().sendKeys(Keys.ENTER);
 
     }
     @Then("user could find camera")
@@ -47,10 +47,16 @@ public class Search {
        Hooks.driver.findElement(By.cssSelector("a[href=\"/electronics\"]")).click();
 
     }
+
     @And ("user can select sub category if found")
     public void selectSubCategory(){
         Hooks.driver.findElement(By.cssSelector("li[class=\"active last\"] a[href=\"/cell-phones\"]")).click();
 
+    }
+    @When ("user could select")
+    public void select(){
+        selectCategory();
+        selectSubCategory();
     }
     @Then("user could see results")
     public void categoryResults(){
@@ -83,15 +89,23 @@ public class Search {
     @And ("user click add item to cart")
     public void addToCart() {
         Hooks.driver.findElement(By.cssSelector("[class=\"button-2 product-box-add-to-cart-button\"]")).click();
-    }
-    @Then ("added successfully to shopping cart mssg")
-    public void addToCartSuccessfully(){
+        //addToCartSuccessfully
         Assert.assertEquals(Hooks.driver.findElement(By.className("content")).getText().contains("The product has been added to your"),true);
 
+        Hooks.driver.findElement(By.cssSelector("[class=\"button-2 product-box-add-to-cart-button\"]")).click();
+        //addToCartSuccessfully
+        Assert.assertEquals(Hooks.driver.findElement(By.className("content")).getText().contains("The product has been added to your"),true);
     }
+//    @Then ("added successfully to shopping cart mssg")
+//    public void addToCartSuccessfully(){
+//        Assert.assertEquals(Hooks.driver.findElement(By.className("content")).getText().contains("The product has been added to your"),true);
+//
+//    }
     //10
     @And ("user click add to Wishlist")
     public void addToWishlist() {
+        Hooks.driver.findElement(By.cssSelector("button[class=\"button-2 add-to-wishlist-button\"]")).click();
+        //add again
         Hooks.driver.findElement(By.cssSelector("button[class=\"button-2 add-to-wishlist-button\"]")).click();
     }
     @Then ("added successfully to Wishlist")
@@ -129,6 +143,7 @@ public class Search {
 
 //id="checkout"
     }
+
     @And ("user fills all checkout data")
     public void fillcheckoutdata() {
         //select new address
@@ -212,5 +227,11 @@ public class Search {
 
 
     }
+    @Given("^user logged in with \"(.*)\" and \"(.*)\"$")
+    public void logged(String username, String password){
+        Hooks.driver.findElement(By.cssSelector("a[class=\"ico-login\"]")).click();
+        Hooks.loginPage.getEMailElement().sendKeys(username);
+        Hooks.loginPage.getPasswordElement().sendKeys(password);
+        Hooks.driver.findElement(By.id("Password")).sendKeys(Keys.ENTER);    }
 
 }

@@ -9,7 +9,7 @@ import org.testng.asserts.SoftAssert;
 public class Login {
     @Given("user should go to login page")
     public void loginLink() {
-        Hooks.driver.findElement(By.cssSelector("a[href=\"/login?returnUrl=%2F\"]")).click();
+        Hooks.driver.findElement(By.cssSelector("a[class=\"ico-login\"]")).click();
     }
 
     @When("^user login with valid \"(.*)\" and \"(.*)\"$")

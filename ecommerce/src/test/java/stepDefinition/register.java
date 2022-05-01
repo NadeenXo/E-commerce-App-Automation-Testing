@@ -7,8 +7,8 @@ import org.testng.Assert;
 public class Register {
     String fname="nadeen";
     String lname="serag";
-    String email="email@gmail.com";
-    String pass="asdf@1234";
+    String email=Hooks.email;
+    String pass=Hooks.password;
 
     @Given("user click on register link")
     public void regLink() throws InterruptedException {
@@ -18,9 +18,9 @@ public class Register {
     }
 @When ("user fills personal details with valid data")
     public void fillDetails()  {
-    Hooks.driver.findElement(By.cssSelector("input[id^=FirstName]")).sendKeys(fname);
-    Hooks.driver.findElement(By.cssSelector("input[id^=LastName]")).sendKeys(lname);
-    Hooks.driver.findElement(By.cssSelector("input[id^=Email]")).sendKeys(email);
+    Hooks.registerPage.getFNameElement().sendKeys(fname);
+    Hooks.registerPage.getLNameElement().sendKeys(lname);
+    Hooks.registerPage.getEMailElement().sendKeys(email);
 
 }
 

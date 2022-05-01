@@ -1,6 +1,6 @@
 @regression
   Feature: Registration | User could signup with a new account
-    Scenario: User could register with valid data
+    Scenario: sc_01 | User could register with valid data
       Given user click on register link
       When user fills personal details with valid data
       And user fills pass with valid data

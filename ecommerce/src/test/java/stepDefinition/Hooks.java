@@ -6,12 +6,19 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.LoginPage;
+import pages.RegisterPage;
+import pages.SearchPage;
 
 import java.util.concurrent.TimeUnit;
 
 public class Hooks {
     static WebDriver driver =null;
     static LoginPage loginPage = null;
+    static RegisterPage registerPage = null;
+    static SearchPage searchPage = null;
+    static String email="email@gmail.com";
+    static String password="asdf@1234";
+
 
     //open Chrome browser & navigates to website
     @Before
@@ -22,6 +29,9 @@ public class Hooks {
         //wait 10 until item exist in dom
         driver.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
         driver.manage().window().maximize();//max screen
+        loginPage = new LoginPage(driver);
+        registerPage = new RegisterPage(driver);
+        searchPage = new SearchPage(driver);
         //nav to website
         driver.navigate().to("https://demo.nopcommerce.com/");
 

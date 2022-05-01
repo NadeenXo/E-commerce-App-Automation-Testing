@@ -1,2 +1,0 @@
-file:src/main/resources/features/F02_login.feature:4:10
-file:src/main/resources/features/F03_search.feature:4:28:52
