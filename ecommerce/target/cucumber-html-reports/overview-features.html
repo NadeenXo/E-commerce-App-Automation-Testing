@@ -50,9 +50,9 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                41,
-                2,
-                9,
+                45,
+                1,
+                6,
                 0,
                 0
             ],
@@ -106,8 +106,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                10,
-                2
+                11,
+                1
             ],
             backgroundColor: [
                 "#00B000",
@@ -153,8 +153,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                   1,
-                   2
+                   11,
+                   1
                ],
                backgroundColor: [
                 "#00B000",
@@ -187,7 +187,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 3) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 12) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -230,7 +230,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>EcommerceAppTestReport</td>
         <td>1</td>
-      <td>01 May 2022, 23:26</td>
+      <td>11 May 2022, 19:16</td>
     </tr>
   </tbody>
 </table>
@@ -338,41 +338,194 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="7000000000">7.000</td>
+        <td class="duration" data-value="7308000000">7.308</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
         <td class="tagname"><a href="report-feature_1_1874070974.html">Login | users could login to open their accounts</a></td>
 
-        <td      class="passed"    >5</td>
-        <td      class="failed"    >1</td>
-        <td     class="skipped"   >3</td>
+        <td      class="passed"    >4</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">9</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">4</td>
 
         <td  class="passed"    >1</td>
-        <td  class="failed"    >1</td>
-        <td class="total">2</td>
+        <td >0</td>
+        <td class="total">1</td>
 
-        <td class="duration" data-value="18545000000">18.545</td>
-        <td class="failed">Failed</td>
+        <td class="duration" data-value="2691000000">2.691</td>
+        <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_2_3958842368.html">Search | users will be able to search for products</a></td>
+        <td class="tagname"><a href="report-feature_2_2918438934.html">User could reset his/her password successfully</a></td>
 
-        <td      class="passed"    >31</td>
+        <td      class="passed"    >5</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">5</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="7172000000">7.172</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_3_3448308191.html">Search | Logged User could search for any product</a></td>
+
+        <td      class="passed"    >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">2</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="1705000000">1.705</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_4_3122268953.html">Logged User could switch between currencies US-Euro</a></td>
+
+        <td      class="passed"    >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">2</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="1044000000">1.044</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_5_2262794033.html">Logged user could select different Categories</a></td>
+
+        <td      class="passed"    >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">3</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="2479000000">2.479</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_6_3513996325.html">Logged user could filter with color</a></td>
+
+        <td      class="passed"    >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">2</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="3104000000">3.104</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_7_2153742796.html">Logged user could select different tags</a></td>
+
+        <td      class="passed"    >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">3</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="4833000000">4.833</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_8_69765408.html">Logged user could add different products to Shopping cart</a></td>
+
+        <td      class="passed"    >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">3</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="3144000000">3.144</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_9_3241203059.html">Logged user could add different products to Wishlist</a></td>
+
+        <td      class="passed"    >4</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">4</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="4142000000">4.142</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_10_131219234.html">Logged user could add different products to compare list</a></td>
+
+        <td      class="passed"    >5</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">5</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="2988000000">2.988</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_11_1352460869.html">Create successful Order</a></td>
+
+        <td      class="passed"    >7</td>
         <td      class="failed"    >1</td>
         <td     class="skipped"   >6</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">38</td>
+        <td class="total">14</td>
 
-        <td  class="passed"    >8</td>
+        <td >0</td>
         <td  class="failed"    >1</td>
-        <td class="total">9</td>
+        <td class="total">1</td>
 
-        <td class="duration" data-value="41863000000">41.863</td>
+        <td class="duration" data-value="23511000000">23.511</td>
         <td class="failed">Failed</td>
       </tr>
   </tbody>
@@ -380,33 +533,33 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>41</td>
-      <td>2</td>
-      <td>9</td>
+      <td>45</td>
+      <td>1</td>
+      <td>6</td>
       <td>0</td>
       <td>0</td>
       <td>52</td>
 
-      <td>10</td>
-      <td>2</td>
+      <td>11</td>
+      <td>1</td>
       <td>12</td>
 
-      <td class="duration">1:7.408</td>
-      <td>3</td>
+      <td class="duration">1:4.121</td>
+      <td>12</td>
     </tr>
     <tr>
       <td></td>
-      <td>78.85%</td>
-      <td>3.85%</td>
-      <td>17.31%</td>
+      <td>86.54%</td>
+      <td>1.92%</td>
+      <td>11.54%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
-      <td>83.33%</td>
-      <td>16.67%</td>
+      <td>91.67%</td>
+      <td>8.33%</td>
       <td></td>
       <td></td>
-      <td>33.33%</td>
+      <td>91.67%</td>
     </tr>
   </tfoot>
 </table>

@@ -77,7 +77,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>EcommerceAppTestReport</td>
         <td>1</td>
-      <td>01 May 2022, 23:26</td>
+      <td>11 May 2022, 19:16</td>
     </tr>
   </tbody>
 </table>
@@ -117,7 +117,7 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_1_1874070974.html">Login | users could login to open their accounts</a>
+      <a href="report-feature_11_1352460869.html">Create successful Order</a>
     </div>
 
 
@@ -127,14 +127,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">15.910</span>
+  <span class="lead-duration duration">23.511</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">sc_03 | User could reset his/her password successfully</span>
+  <span class="name">sc_12 | user could create a successful Order</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -165,7 +165,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">stepDefinition.Hooks.open_browser()</span>
 
-  <span class="lead-duration duration">6.697</span>
+  <span class="lead-duration duration">6.874</span>
 
           </div>
 
@@ -200,305 +200,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">user is logged in with &quot;<span class="argument">emaill@gmail.com</span>&quot; and &quot;<span class="argument">asdf@1234</span>&quot;</span>
+  <span class="name">user is logged in with email and password</span>
 
-  <span class="lead-duration duration">1.854</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-When failed">
-  <span class="keyword indention">When</span>
-  <span class="name">user should click on my account link then click on change password</span>
-
-  <span class="lead-duration duration">14.056</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
-          <a>org.openqa.selenium.NoSuchElementException:</a>
-      </div>
-      <div id="msg-4" class="collapse collapsable-details  in ">
-        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;a[class=&quot;ico-account&quot;]&quot;}
-  (Session info: chrome=101.0.4951.41)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.2', revision: '9a5a329c5a'
-System info: host: 'DESKTOP-LIKU9SB', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_151'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9775d804a2e92cb892c15f61e395ebaa, findElement {using=css selector, value=a[class=&quot;ico-account&quot;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.41, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\nadeen\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59575}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59575/devtoo..., se:cdpVersion: 101.0.4951.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 9775d804a2e92cb892c15f61e395ebaa
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-	at stepDefinition.Login.changePasswordLink(Login.java:45)
-	at &#10045;.user should click on my account link then click on change password(file:///C:/Users/nadeen/Desktop/fwd/ecommerce%20app/ecommerce/src/main/resources/features/F02_login.feature:12)
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">user fills old pass &quot;<span class="argument">asdf@1234</span>&quot; and new pass</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">user click on Change password button</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">user has changed his-her password successfully</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-  <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-5">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="after-5" class="inner-level collapse collapsable-details ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">After</span>
-              <span class="location name">stepDefinition.Hooks.close_browser()</span>
-
-  <span class="lead-duration duration">0.737</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-    </div>
-  </div>
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_2_3958842368.html">Search | users will be able to search for products</a>
-    </div>
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_233058432.html">@regression</a>
-</div>
-
-
-  <span class="lead-duration duration">22.136</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-6">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">sc_12 | user could create a successful Order</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-6" class="collapse collapsable-details  in ">
-
-
-  <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-7">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="before-7" class="inner-level collapse collapsable-details ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">Before</span>
-              <span class="location name">stepDefinition.Hooks.open_browser()</span>
-
-  <span class="lead-duration duration">6.319</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-    </div>
-  </div>
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-8">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-8" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-Given passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">user logged in with &quot;<span class="argument">email@gmail.com</span>&quot; and &quot;<span class="argument">111111</span>&quot;</span>
-
-  <span class="lead-duration duration">2.314</span>
+  <span class="lead-duration duration">3.041</span>
 
 </div>
 
@@ -525,7 +229,7 @@ Session ID: 9775d804a2e92cb892c15f61e395ebaa
   <span class="keyword indention">When</span>
   <span class="name">user could select a category</span>
 
-  <span class="lead-duration duration">1.144</span>
+  <span class="lead-duration duration">1.523</span>
 
 </div>
 
@@ -552,7 +256,7 @@ Session ID: 9775d804a2e92cb892c15f61e395ebaa
   <span class="keyword indention">And</span>
   <span class="name">user can select sub category if found</span>
 
-  <span class="lead-duration duration">0.731</span>
+  <span class="lead-duration duration">0.829</span>
 
 </div>
 
@@ -579,7 +283,7 @@ Session ID: 9775d804a2e92cb892c15f61e395ebaa
   <span class="keyword indention">And</span>
   <span class="name">user click add item to cart</span>
 
-  <span class="lead-duration duration">0.605</span>
+  <span class="lead-duration duration">0.623</span>
 
 </div>
 
@@ -606,7 +310,7 @@ Session ID: 9775d804a2e92cb892c15f61e395ebaa
   <span class="keyword indention">When</span>
   <span class="name">user click on shopping cart</span>
 
-  <span class="lead-duration duration">2.675</span>
+  <span class="lead-duration duration">3.554</span>
 
 </div>
 
@@ -633,7 +337,7 @@ Session ID: 9775d804a2e92cb892c15f61e395ebaa
   <span class="keyword indention">And</span>
   <span class="name">user accept terms of service</span>
 
-  <span class="lead-duration duration">0.065</span>
+  <span class="lead-duration duration">0.060</span>
 
 </div>
 
@@ -660,7 +364,7 @@ Session ID: 9775d804a2e92cb892c15f61e395ebaa
   <span class="keyword indention">And</span>
   <span class="name">user choose checkout</span>
 
-  <span class="lead-duration duration">2.586</span>
+  <span class="lead-duration duration">1.815</span>
 
 </div>
 
@@ -687,7 +391,7 @@ Session ID: 9775d804a2e92cb892c15f61e395ebaa
   <span class="keyword indention">And</span>
   <span class="name">user fills all checkout data</span>
 
-  <span class="lead-duration duration">12.016</span>
+  <span class="lead-duration duration">12.066</span>
 
 </div>
 
@@ -698,19 +402,19 @@ Session ID: 9775d804a2e92cb892c15f61e395ebaa
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
           <a>org.openqa.selenium.NoSuchElementException:</a>
       </div>
-      <div id="msg-9" class="collapse collapsable-details  in ">
+      <div id="msg-4" class="collapse collapsable-details  in ">
         <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#billing\-address\-select&quot;}
-  (Session info: chrome=101.0.4951.41)
+  (Session info: chrome=101.0.4951.54)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.1.2', revision: '9a5a329c5a'
 System info: host: 'DESKTOP-LIKU9SB', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_151'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6d8ada641e34dcf544a95e7cfec46235, findElement {using=id, value=billing-address-select}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.41, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\nadeen\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59986}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59986/devtoo..., se:cdpVersion: 101.0.4951.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 6d8ada641e34dcf544a95e7cfec46235
+Command: [56cf12964803c8bd0556eb8bf075bc77, findElement {using=id, value=billing-address-select}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\nadeen\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54595}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54595/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 56cf12964803c8bd0556eb8bf075bc77
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -726,8 +430,8 @@ Session ID: 6d8ada641e34dcf544a95e7cfec46235
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-	at stepDefinition.Search.fillcheckoutdata(Search.java:150)
-	at &#10045;.user fills all checkout data(file:///C:/Users/nadeen/Desktop/fwd/ecommerce%20app/ecommerce/src/main/resources/features/F03_search.feature:62)
+	at stepDefinition.SuccessOrder.fillcheckoutdata(SuccessOrder.java:67)
+	at &#10045;.user fills all checkout data(file:///C:/Users/nadeen/Desktop/fwd/ecommerce%20app/ecommerce/src/main/resources/features/F12_successOrder.feature:16)
 </pre>
       </div>
     </div>
@@ -913,7 +617,7 @@ Session ID: 6d8ada641e34dcf544a95e7cfec46235
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-10">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-5">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -925,13 +629,13 @@ Session ID: 6d8ada641e34dcf544a95e7cfec46235
 
     </div>
 
-    <div id="after-10" class="inner-level collapse collapsable-details ">
+    <div id="after-5" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">stepDefinition.Hooks.close_browser()</span>
 
-  <span class="lead-duration duration">0.692</span>
+  <span class="lead-duration duration">1.660</span>
 
           </div>
 

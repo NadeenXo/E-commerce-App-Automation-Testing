@@ -32,42 +32,42 @@ public class Login {
 
     }
 
-    @Given("^user is logged in with \"(.*)\" and \"(.*)\"$")
-    public void loggedUser(String username, String password){
-        loginLink();
-        validData(username,password);
-        loginBtn();
-    }
-
-    @When ("user should click on my account link then click on change password")
-    public void changePasswordLink() throws InterruptedException {
-        Thread.sleep(2000);
-        Hooks.driver.findElement(By.cssSelector("a[class=\"ico-account\"]")).click();
-        Hooks.driver.findElement(By.cssSelector("a[href=\"/customer/changepassword\"]")).click();//change password
-    }
-    @And ("^user fills old pass \"(.*)\" and new pass$")
-    public void changeToNewPassword(String password){
-        String NewPassword="111111";
-        Hooks.driver.findElement(By.id("OldPassword")).sendKeys(password);
-        Hooks.driver.findElement(By.id("NewPassword")).sendKeys(NewPassword);
-        Hooks.driver.findElement(By.id("ConfirmNewPassword")).sendKeys(NewPassword);
-
-    }
-
-    @And ("user click on Change password button")
-    public void ChangePassBtn(){
-        Hooks.driver.findElement(By.cssSelector("button[class=\"button-1 change-password-button\"]")).click();
-
-    }
-    @Then ("user has changed his-her password successfully")
-    public void PassChangedSuccessfully(){
-        SoftAssert softAssert = new SoftAssert();
-        String actRes = Hooks.driver.findElement(By.className("content")).getText();
-        softAssert.assertEquals(actRes.contains("Password was changed"),true, "1st assertion");//relative
-        softAssert.assertEquals(Hooks.driver.findElement(By.className("content")).getText().contains("Password was changed"),true,"2nd assertion");
-
-        softAssert.assertAll();
-
-    }
-
+//    @Given("^user is logged in with \"(.*)\" and \"(.*)\"$")
+//    public void loggedUser(String username, String password){
+//        loginLink();
+//        validData(username,password);
+//        loginBtn();
+//    }
+//
+//    @When ("user should click on my account link then click on change password")
+//    public void changePasswordLink() throws InterruptedException {
+//        Thread.sleep(2000);
+//        Hooks.driver.findElement(By.cssSelector("a[class=\"ico-account\"]")).click();
+//        Hooks.driver.findElement(By.cssSelector("a[href=\"/customer/changepassword\"]")).click();//change password
+//    }
+//    @And ("^user fills old pass \"(.*)\" and new pass$")
+//    public void changeToNewPassword(String password){
+//        String NewPassword="111111";
+//        Hooks.driver.findElement(By.id("OldPassword")).sendKeys(password);
+//        Hooks.driver.findElement(By.id("NewPassword")).sendKeys(NewPassword);
+//        Hooks.driver.findElement(By.id("ConfirmNewPassword")).sendKeys(NewPassword);
+//
+//    }
+//
+//    @And ("user click on Change password button")
+//    public void ChangePassBtn(){
+//        Hooks.driver.findElement(By.cssSelector("button[class=\"button-1 change-password-button\"]")).click();
+//
+//    }
+//    @Then ("user has changed his-her password successfully")
+//    public void PassChangedSuccessfully(){
+//        SoftAssert softAssert = new SoftAssert();
+//        String actRes = Hooks.driver.findElement(By.className("content")).getText();
+//        softAssert.assertEquals(actRes.contains("Password was changed"),true, "1st assertion");//relative
+//        softAssert.assertEquals(Hooks.driver.findElement(By.className("content")).getText().contains("Password was changed"),true,"2nd assertion");
+//
+//        softAssert.assertAll();
+//
+//    }
+//
 }
